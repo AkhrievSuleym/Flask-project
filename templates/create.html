@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление статьи</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <div class="Logo">
+                <h1 style="font-size: 40px" >Добавление статьи</h1>
+            </div>
+        <button type="button" class="ind" style="margin-bottom: 18px; margin-top: 18px;">
+                <a href='/'>Главная</a>
+            </button>
+    </header>
+    <form class="form-horizontal" role="form" method="POST">
+        <div class="first">
+            <div class="mb-3">
+                 <label for="Input" class="form-label">Название статьи</label>
+                 <p><input type="text" class="form-control" id="Input" name="post_name" style="width:700px"></p>
+            </div>
+            <div class="mb-3">
+                 <label for="proof" class="form-label">Краткое описание статьи</label>
+                 <p><input type="text" class="form-control" id="proof" name="intro" style="width:700px"></p>
+            </div>
+            <div class="mb-3">
+                <label for="area" class="form-label">Содержимое статьи</label>
+                <p><textarea rows="10" cols="45" id='area' name="post" style="width:700px"></textarea></p>
+            </div>
+            <p><input type="submit" value="Добавить"></p>
+            <h1>{{ answer }}</h1>
+        </div>
+    </form>
+</body>
+</html>

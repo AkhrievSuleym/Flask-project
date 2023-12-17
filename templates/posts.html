@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ post.post_name }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <header style="margin-bottom: 10px">
+        <div class="ALl_header_menu">
+            <div class="Logo">
+                <h1>ИУ4</h1>
+            </div>
+            <button type="button" class="ind">
+                <a href='/'>Главная</a>
+            </button>
+        </div>
+    </header>
+  <div class="alert alert-info" style="width: 1000px; margin: 0 auto; margin-bottom: 10px">
+        <h1>{{ post.post_name }}</h1>
+        <p>{{ post.intro }}</p>
+        <p> {{ post.post }}</p>
+        <p>Дата создания: {{ post.date.date() }} </p>
+        <button class="btn btn-danger"><a href="/{{ post.id }}/delete">Удалить</a></button>
+        <button class="btn btn-warning"><a href="/{{ post.id }}/update">Редактировать</a></button>
+    </div>
+</body>
+</html>

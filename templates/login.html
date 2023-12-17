@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class = 'first'>
+  <h1 class="name">Вход</h1>
+    <form class="form-horizontal" role="form" method="POST">
+      <div class="mb-3">
+         <label for="Input" class="form-label">Логин</label>
+         <input type="text" class="form-control" id="Input" name = 'username'>
+      </div>
+      <div class="mb-3">
+      <div class="col-auto">
+        <label for="inputPassword6" class="col-form-label">Ваш пароль</label>
+      </div>
+        <div class="col-auto">
+          <input type="password" id="inputPassword6" class="form-control" name="password">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <input class="btn btn-primary" type="reset" value="Очистить форму">
+        </div>
+      </div>
+      <div class="btn-group">
+          <div class="button">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-info">Вход</button>
+            </div>
+          </div>
+          <div class="register">
+              <button type="button" class="btn btn-outline-danger"><a href="/new_register">Регистарция</a></button>
+            </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
